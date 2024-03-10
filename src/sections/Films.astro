@@ -3,11 +3,15 @@ import Card from "@/components/Card.astro"
 import { FILMS } from "@/consts/films.ts"
 ---
 
-<section class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4 gap-y-10">
-    {
-        FILMS.filter((_, i) => i < 6).map(({ title, image, color }) => (
-            <script>console.log("si hay")</script>
-            <Card title={title} image={image} color={color} />
-        ))
-    }
+<section>
+    <h2 class="text-4xl font-bold mb-8">Actores</h2>
+
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4 gap-y-10">
+        {
+            FILMS.filter((_, i) => i < 6).map(({ title, image, color }) => (
+                <script>console.log("si hay")</script>
+                <Card title={title} image={image} color={color} />
+            ))
+        }
+    </div>
 </section>
