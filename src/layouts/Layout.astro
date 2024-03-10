@@ -1,0 +1,43 @@
+---
+interface Props {
+    title: string
+    description: string
+}
+
+const { title, description } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="color-scheme" content="dark">
+
+    <meta name="keywords" content="netflix, itbflix, astro, tailwind" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <!-- <meta name="twitter:image" content="https://itbflix-remake.vercel.app/og.png" /> -->
+
+    <!-- /<meta name="og:image" content="https://itbflix-remake.vercel.app/og.png" /> -->
+    <meta name="og:title" content={title} />
+    <meta name="og:description" content={description} />
+    <meta name="og:url" content="https://itbflix-remake.vercel.app" />
+    <meta name="og:site_name" content="ITBFlix" />
+    <meta name="og:type" content="website" />
+    <meta name="og:locale" content="es_ES" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+</head>
+<body>
+    <slot />
+</body>
+</html>
