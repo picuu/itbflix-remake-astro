@@ -1,0 +1,19 @@
+---
+import HoverCard from "@/components/HoverCard.astro"
+import { FILMS } from "@/consts/films.ts"
+
+const asideFilms = FILMS.filter(({ title }) => title.toLowerCase().includes("sin novedad en el frente") || title.toLowerCase().includes("avatar"))
+---
+
+<aside>
+    <h2 class="text-4xl font-bold mb-8">Noticias</h2>
+        {
+            <div class="flex flex-col gap-8">
+                {
+                    asideFilms.map(({ title, image, info }) => (
+                        <HoverCard title={title} image={image} info={info} />
+                    ))
+                }
+            </div>
+        }
+</aside>

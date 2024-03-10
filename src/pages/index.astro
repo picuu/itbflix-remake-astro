@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro"
 import Films from "@/sections/Films.astro"
 import Actors from "@/sections/Actors.astro"
+import Aside from "@/sections/Aside.astro"
 ---
 
 <Layout
@@ -11,5 +12,8 @@ import Actors from "@/sections/Actors.astro"
 	<main class="max-w-screen-2xl w-full m-auto pt-12 sm:pt-18 px-8 flex flex-col gap-28">
 		<Films />
 		<Actors />
+		<div class="grid grid-cols-[1fr_4fr] gap-16">
+			<Aside />
+		</div>
 	</main>
 </Layout>
