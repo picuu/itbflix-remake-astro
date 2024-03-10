@@ -9,7 +9,6 @@ import { FILMS } from "@/consts/films.ts"
     <div class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4 gap-y-10">
         {
             FILMS.filter((_, i) => i < 6).map(({ title, image, color }) => (
-                <script>console.log("si hay")</script>
                 <Card title={title} image={image} color={color} />
             ))
         }
